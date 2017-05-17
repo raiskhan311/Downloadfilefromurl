@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadTaskWithNSURLSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-Gw-xhP">
+                                <rect key="frame" x="223" y="153" width="153" height="57"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.25098039220000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="JDP-pZ-pC0"/>
+                                    <constraint firstAttribute="width" constant="153" id="oYh-0g-wQs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESC-vU-b8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vb6-OY-ZjP">
+                                <rect key="frame" x="223" y="230" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.97151428461074829" green="0.0" blue="0.19507753849029541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="d2h-Of-PiL"/>
+                                    <constraint firstAttribute="height" constant="30" id="iwM-2p-1mX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="||">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9n1-eY-ub0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxB-lt-DZh">
+                                <rect key="frame" x="284" y="231" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.97151428461074829" green="0.0" blue="0.19507753849029541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m30-ID-Itl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5x-ZC-6xa">
+                                <rect key="frame" x="346" y="230" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.97151428461074829" green="0.0" blue="0.19507753849029541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MsI-Jb-E3S"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a2U-hc-leZ">
+                                <rect key="frame" x="223" y="299" width="153" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a2U-hc-leZ" firstAttribute="top" secondItem="XxB-lt-DZh" secondAttribute="bottom" constant="38" id="4Pc-UX-UcS"/>
+                            <constraint firstItem="U5x-ZC-6xa" firstAttribute="trailing" secondItem="d8L-Gw-xhP" secondAttribute="trailing" id="4g3-Od-gvj"/>
+                            <constraint firstItem="U5x-ZC-6xa" firstAttribute="height" secondItem="XxB-lt-DZh" secondAttribute="height" id="4sB-b3-Whl"/>
+                            <constraint firstItem="vb6-OY-ZjP" firstAttribute="leading" secondItem="d8L-Gw-xhP" secondAttribute="leading" id="8zy-iw-OiW"/>
+                            <constraint firstItem="a2U-hc-leZ" firstAttribute="width" secondItem="d8L-Gw-xhP" secondAttribute="width" id="91k-lJ-I9d"/>
+                            <constraint firstItem="XxB-lt-DZh" firstAttribute="top" secondItem="d8L-Gw-xhP" secondAttribute="bottom" constant="21" id="A1Z-Ns-1zT"/>
+                            <constraint firstItem="vb6-OY-ZjP" firstAttribute="top" secondItem="d8L-Gw-xhP" secondAttribute="bottom" constant="20" id="CYW-zF-gLI"/>
+                            <constraint firstItem="U5x-ZC-6xa" firstAttribute="top" secondItem="d8L-Gw-xhP" secondAttribute="bottom" constant="20" id="JMt-mn-s3y"/>
+                            <constraint firstItem="XxB-lt-DZh" firstAttribute="width" secondItem="vb6-OY-ZjP" secondAttribute="width" id="M6M-Dx-Td8"/>
+                            <constraint firstItem="vb6-OY-ZjP" firstAttribute="leading" secondItem="d8L-Gw-xhP" secondAttribute="leading" id="MyQ-dK-lc7"/>
+                            <constraint firstItem="U5x-ZC-6xa" firstAttribute="width" secondItem="XxB-lt-DZh" secondAttribute="width" id="Szo-fr-xaV"/>
+                            <constraint firstItem="a2U-hc-leZ" firstAttribute="centerX" secondItem="d8L-Gw-xhP" secondAttribute="centerX" id="aDX-Wf-VvB"/>
+                            <constraint firstItem="d8L-Gw-xhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dWQ-qp-ald"/>
+                            <constraint firstItem="XxB-lt-DZh" firstAttribute="height" secondItem="vb6-OY-ZjP" secondAttribute="height" id="jvu-dk-pjG"/>
+                            <constraint firstItem="d8L-Gw-xhP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="133" id="tLk-EE-r25"/>
+                            <constraint firstItem="XxB-lt-DZh" firstAttribute="centerX" secondItem="d8L-Gw-xhP" secondAttribute="centerX" id="yqx-QW-nvh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MyQ-dK-lc7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="a2U-hc-leZ" id="bpk-RW-Tec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="326"/>
+        </scene>
+    </scenes>
+</document>
